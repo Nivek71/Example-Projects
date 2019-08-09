@@ -1,7 +1,5 @@
 # Example-Projects
-This repository is aimed at allowing dependents to create extensive MiniGames quickly and easily. It includes three seperate plugins, which are all listed here in the same repository because it is easier to manage them together using Intellij's modules.
-
-The three plugins, and their main features are listed as follows:
+This repository is aimed at allowing dependents to create extensive MiniGames quickly and easily. It includes three seperate plugins, which are listed below.
 
 # UtilityAPI
 The UtilityAPI plugin contains miscellaneous utility classes, which are not unique to MiniGames. These classes were seperated to another project so they may be reused for non-minigame projects. The main features of the UtilityAPI include:

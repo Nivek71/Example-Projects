@@ -41,7 +41,7 @@ public abstract class ActiveMiniGameStateBase extends LobbyState {
             for (MiniGamePlayer player : getLobby().getPlayerList()) {
                 if (player.isSpectator())
                     player.setSpectator(false);
-                else removePlayer(player);
+                removePlayer(player);
                 ScoreboardBase.removeScoreboard(player.getPlayer());
             }
         }
@@ -59,6 +59,6 @@ public abstract class ActiveMiniGameStateBase extends LobbyState {
         super.onPlayerQuit(player);
         if (player.isSpectator())
             player.setSpectator(false);
-        else removePlayer(player);
+        removePlayer(player);
     }
 }

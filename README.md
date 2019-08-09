@@ -38,4 +38,4 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  - The CTF_Plugin defines the KitManager (which holds all of the kits for this MiniGame), the MiniGameInfo (which stores MetaData about the MiniGame type), a MiniGameMap instance (which is not specific to this MiniGame, but an instance of the MiniGame map must be defined to play any MiniGame) and a CTF_MapConfiguration instance (which is a type of MapConfiguration, specific to CTF, which has been added to the defined MiniGameMap).
 - CaptureTheFlag class: simply defines some rules for the MiniGame
 - MapConfiguration class: keeps track of the amount of points needed to win
-- CTF_Team class: tracks flag captures, amounts of points per team, and other behavior.
+- CTF_Team class: tracks flag captures, amount of points per team, and other behavior.

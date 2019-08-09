@@ -21,7 +21,7 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  - The MiniGame class, which keeps track of the MiniGame itself, and any state that a MiniGame may need to track
  - The MiniGameInfo class, which stores information about a type of MiniGame, such as the minimum amount of players needed to start or the kits available in a certain minigame.
  
- Rule bounds:
+ Rule bounds: \n
  The MiniGameAPI defines the default rule policy for players: players are bound to their MiniGamePlayer instance, or given EMPTY_BOUNDS if not in a Lobby.
  The MiniGamePlayer has parent bounds (keep in mind that children bounds override parent bounds) and the order is as follows (by default):
  For active players:

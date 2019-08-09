@@ -11,6 +11,9 @@ import java.util.List;
 
 public class MiniGameInfo<T extends MiniGame<? super S>, S extends MapConfiguration<? extends T>> implements Cloneable {
     private static final List<MiniGameInfo<?, ?>> miniGameTypes = new ArrayList<>();
+    // the globalState is the original MiniGameInfo -- that is, the one created with a constructor and not created with
+    // the clone method.
+    private MiniGameInfo<T,S> globalState = this;
     private String name;
     private final Class<T> miniGameClass;
     private KitManager kitManager;
@@ -66,6 +69,10 @@ public class MiniGameInfo<T extends MiniGame<? super S>, S extends MapConfigurat
 
     public T createInstance(Lobby lobby, S configuration) {
         return miniGameBuilder.apply(lobby, this, configuration);
+    }
+
+    public MiniGameInfo<T, S> getGlobalState() {
+        return globalState;
     }
 
     @Override

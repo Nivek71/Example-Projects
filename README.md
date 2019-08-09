@@ -6,10 +6,10 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  - the function package, which includes several FunctionalInterfaces. These interfaces are used in place of many of the Java JDK's functional interfaces (when needed). The functional interface method is the same as their Java JDK counterpart, except these methods allow implementors to throw checked exceptions. The functions also provide a default implementation for the counterpart function (because they extend the counterpart function), which calls the throwing version of the method, catches any exception and wraps it in a WrappedException.
  - the input package, which contains methods for player input -- currently Inventory GUIs.
  - rules, which dicate what groups can and cannot do (such as placing blocks, or taking damage). Objects can be added to groups, and rule enforcers are defined for these rules, to prevent violations of the rule. Rule groups implement the RuleBound class; rules extend the Rule class.
- - timer, which features some scheduling, using bukkit tasks. The timers feature some common functionality of bukkit tasks, such as Countdowns, but provide easier ways of managing timers (notably the ability to register timers with specific objects, then later cancel all timers associated with that object).
+ - timer, which features some scheduling using bukkit tasks. The timers feature some common functionality of bukkit tasks, such as Countdowns, but provide easier ways of managing timers (notably the ability to register timers with specific objects, then later cancel all timers associated with that object).
  - Helper class, which is a Utility class for methods that don't belong anywhere else
- - Logger class, which provides simple Exception logging, which can be used cleanly without clutter
- And a few other various utility classes/packages
+ - Logger class, which provides simple Exception logging, which can be used cleanly without clutter.
+ ...And a few other various utility classes/packages
  
  # MiniGameAPI
  The MiniGameAPI is used to easily define new MiniGames. The MiniGameAPI has some events which may be listened to, but the majority of the interaction between the MiniGame and the MiniGameAPI is done with callbacks; callbacks are performed during various state changes.

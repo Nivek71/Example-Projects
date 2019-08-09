@@ -31,7 +31,7 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  For non MiniGame LobbyStates (such as Waiting):  
  MiniGamePlayer > LobbyState > Lobby  
    
- So, if you want players to be able to change their kit, give the LobbyState the PLAYER_QUEUE_KIT rule. This will allow both players and spectators to change their kit, which will apply on next respawn, unless they have the PLAYER_APPLY_KIT rule.  
+ So, if you want players to be able to change their kit, give the LobbyState the PLAYER_QUEUE_KIT rule. This will allow both players and spectators to change their kit, which will apply on next respawn, unless they have the PLAYER_APPLY_KIT rule (in which case it will apply immediately).  
    
  # MiniGame-CTF
  The MiniGame-CTF project is a sample MiniGame created using the UtilityAPI and the MiniGameAPI.

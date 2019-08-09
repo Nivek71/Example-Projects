@@ -1,0 +1,9 @@
+name: MiniGameAPI
+version: "1.0"
+main: nivek71.api.minigame.MiniGamePlugin
+api-version: "1.13"
+depend:
+  - UtilitiesPlugin
+commands:
+  kit:
+    description: "Bring up the Kit Selection Menu"

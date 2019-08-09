@@ -1,0 +1,7 @@
+name: "CaptureTheFlag"
+main: nivek71.minigame.ctf.CTF_Plugin
+api-version: "1.13"
+version: "1.0"
+depend:
+  - MiniGameAPI
+  - UtilitiesPlugin

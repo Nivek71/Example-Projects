@@ -1,0 +1,6 @@
+name: UtilitiesPlugin
+main: nivek71.api.utility.UtilityPlugin
+api-version: "1.13"
+version: "1.0"
+softdepend:
+  - ActionBarAPI

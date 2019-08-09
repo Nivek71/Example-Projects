@@ -4,13 +4,12 @@ import nivek71.api.minigame.lobby.Lobby;
 import nivek71.api.minigame.map.MapConfiguration;
 import nivek71.api.minigame.player.kit.KitManager;
 import nivek71.api.utility.functions.TriFunctionEx;
-import nivek71.api.utility.rule.RuleBoundBase;
 import org.apache.commons.lang.Validate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MiniGameInfo<T extends MiniGame<? super S>, S extends MapConfiguration<? extends T>> extends RuleBoundBase implements Cloneable {
+public class MiniGameInfo<T extends MiniGame<? super S>, S extends MapConfiguration<? extends T>> implements Cloneable {
     private static final List<MiniGameInfo<?, ?>> miniGameTypes = new ArrayList<>();
     private String name;
     private final Class<T> miniGameClass;

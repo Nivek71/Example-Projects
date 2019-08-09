@@ -9,7 +9,6 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  - timer, which features some scheduling using bukkit tasks. The timers feature some common functionality of bukkit tasks, such as Countdowns, but provide easier ways of managing timers (notably the ability to register timers with specific objects, then later cancel all timers associated with that object).
  - Helper class, which is a Utility class for methods that don't belong anywhere else
  - Logger class, which provides simple Exception logging, which can be used cleanly without clutter.
- ...And a few other various utility classes/packages
  
  # MiniGameAPI
  The MiniGameAPI is used to easily define new MiniGames. The MiniGameAPI has some events which may be listened to, but the majority of the interaction between the MiniGame and the MiniGameAPI is done with callbacks; callbacks are performed during various state changes.

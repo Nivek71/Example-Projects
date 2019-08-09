@@ -11,7 +11,7 @@ The UtilityAPI plugin contains miscellaneous utility classes, which are not uniq
  - Logger class, which provides simple Exception logging, which can be used cleanly without clutter
  And a few other various utility classes/packages
  
- #MiniGameAPI
+ # MiniGameAPI
  The MiniGameAPI is used to easily define new MiniGames. The MiniGameAPI has some events which may be listened to, but the majority of the interaction between the MiniGame and the MiniGameAPI is done with callbacks; callbacks are performed during various state changes.
  The structure of the MiniGameAPI is as follows:
  - The Lobby class, which holds all players interested in the MiniGame, such as active players, spectators, or players waiting for the the minigame to start. The Lobby does very little work on its own, instead delegating tasks to the active LobbyState.

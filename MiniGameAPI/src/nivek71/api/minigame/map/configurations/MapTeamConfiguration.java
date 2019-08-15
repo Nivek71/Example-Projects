@@ -2,6 +2,7 @@ package nivek71.api.minigame.map.configurations;
 
 import nivek71.api.minigame.MiniGame;
 import nivek71.api.minigame.MiniGamePlugin;
+import nivek71.api.minigame.events.MiniGamePlayerAttackPlayerEvent;
 import nivek71.api.minigame.events.MiniGamePlayerDeathEvent;
 import nivek71.api.minigame.map.MapConfiguration;
 import nivek71.api.minigame.map.MiniGameMap;
@@ -11,6 +12,7 @@ import nivek71.api.minigame.map.configurations.teamdivider.WeighedTeamDivider;
 import nivek71.api.minigame.player.MiniGamePlayer;
 import nivek71.api.utility.Helpers;
 import nivek71.api.utility.containers.Pair;
+import nivek71.api.utility.rule.rules.Rule;
 import nivek71.api.utility.rule.rules.StandardRule;
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Location;
@@ -33,6 +35,15 @@ public class MapTeamConfiguration<ThisType extends MapTeamConfiguration<ThisType
             }
         }, EventPriority.MONITOR, true));
     }
+
+    public static final Rule TEAM_FRIENDLY_FIRE = new Rule().addPlayerRuleEnforcer(MiniGamePlugin.getPlugin(), MiniGamePlayerAttackPlayerEvent.class, true, event -> {
+        // if rule is not set, check whether the damaged player is on the same team, and if so, prevent the damage from occurring
+        if (event.getMiniGame().getMapConfiguration() instanceof MapTeamConfiguration) {
+            MiniGameTeam team = ((MapTeamConfiguration) event.getMiniGame().getMapConfiguration()).getPlayersTeam(event.getMiniGamePlayer());
+            if (team != null && team.isOnTeam(event.getDamagedPlayer()))
+                event.setCancelled(true);
+        }
+    });
 
     public MapTeamConfiguration(Class<T> requiredMiniGameType, MiniGameMap map, boolean allowMapDamage, TeamDivider<S> teamDivider) {
         super(requiredMiniGameType, map, allowMapDamage);

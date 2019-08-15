@@ -1,6 +1,7 @@
 package nivek71.api.minigame.map;
 
 import nivek71.api.minigame.MiniGame;
+import nivek71.api.minigame.MiniGameWinner;
 import nivek71.api.minigame.lobby.Lobby;
 import nivek71.api.minigame.player.MiniGamePlayer;
 import nivek71.api.utility.Logger;
@@ -82,6 +83,6 @@ public abstract class MapConfiguration<T extends MiniGame> extends RuleBoundLink
         // do nothing by default
     }
 
-    public abstract Collection<? extends MiniGameTeam<?>> getActiveParticipants();
+    public abstract Collection<? extends MiniGameWinner> getActiveParticipants();
     public abstract Location getSpawnLocationFor(MiniGamePlayer miniGamePlayer);
 }

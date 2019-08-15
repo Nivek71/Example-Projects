@@ -139,6 +139,6 @@ public class MapTeamConfiguration<ThisType extends MapTeamConfiguration<ThisType
     @Override
     public Location getSpawnLocationFor(MiniGamePlayer miniGamePlayer) {
         S team = getPlayersTeam(miniGamePlayer);
-        return team == null ? null : team.getNextSpawnLocation();
+        return team == null ? null : team.getNextSpawnLocation(miniGamePlayer);
     }
 }

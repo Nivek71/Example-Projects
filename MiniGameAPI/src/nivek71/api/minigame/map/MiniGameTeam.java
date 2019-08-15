@@ -113,7 +113,7 @@ public class MiniGameTeam<T extends MapConfiguration<?>> extends RuleBoundLinkBa
         this.spawnLocationIndex = spawnLocationIndex;
     }
 
-    public Location getNextSpawnLocation() {
+    public Location getNextSpawnLocation(MiniGamePlayer miniGamePlayer) {
         Validate.notEmpty(spawnLocations, "spawnLocations is empty");
         return spawnLocations.get(spawnLocationIndex = (spawnLocationIndex + 1) % spawnLocations.size());
     }
